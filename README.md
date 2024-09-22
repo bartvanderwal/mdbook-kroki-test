@@ -3,7 +3,12 @@
 I'm experiencing a problem with the (mdbook kroki-preprocessor)[
 https://github.com/JoelCourtney/mdbook-kroki-preprocessor]. This allows you to use Mermaid or PlantUML 'documentation as code' or 'diagrams as text' within mdbook, a static website generator.
 
-I get a vague error on running mdbook-build.
+I get a vague error:
+```console
+HTTP status client error (400 Bad Request) for url (https://kroki.io/)
+```
+
+on running `mdbookbuild`.
 
 ```markdown
 # Les 2 - ORM (EF core)
