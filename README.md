@@ -1,7 +1,9 @@
 # Minimal setup to test mdbook kroki-preprocessor
 
-I'm experiencing a problem with the (mdbook kroki-preprocessor)[
-https://github.com/JoelCourtney/mdbook-kroki-preprocessor]. This allows you to use Mermaid or PlantUML 'documentation as code' or 'diagrams as text' within mdbook, a static website generator.
+This repo was setup as reproduction for an a problem with the (mdbook kroki-preprocessor)[
+https://github.com/JoelCourtney/mdbook-kroki-preprocessor]. I created an [issue](https://github.com/JoelCourtney/mdbook-kroki-preprocessor/issues/33) for this.
+
+The kroki-preprocessor allows you to use [Kroki](https://kroki.io/) Mermaid or PlantUML 'documentation as code' or 'diagrams as text' within ['mdbook'](https://rust-lang.github.io/mdBook/index.html), a static website generator.
 
 I get a vague error:
 
