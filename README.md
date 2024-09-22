@@ -4,11 +4,12 @@ I'm experiencing a problem with the (mdbook kroki-preprocessor)[
 https://github.com/JoelCourtney/mdbook-kroki-preprocessor]. This allows you to use Mermaid or PlantUML 'documentation as code' or 'diagrams as text' within mdbook, a static website generator.
 
 I get a vague error:
+
 ```console
 HTTP status client error (400 Bad Request) for url (https://kroki.io/)
 ```
 
-on running `mdbookbuild`.
+on running `mdbook build`.
 
 ```markdown
 # Les 2 - ORM (EF core)
@@ -43,4 +44,12 @@ HTTP status client error (400 Bad Request) for url (https://kroki.io/)
 
 2024-09-22 07:23:45 [ERROR] (mdbook::utils): Error: The "kroki-preprocessor" preprocessor exited unsuccessfully with exit status: 1 status
 mdbook-kroki-test % 
+```
+
+In order to stably reproduce I have a multi-stage Docker file which builds the book in a build container, and then hosts the content in an NGINX container.
+
+Make sure you have DOcker installed it, for instance using [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/) or macOS and then:
+
+```console
+docker build .
 ```
