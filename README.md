@@ -51,5 +51,11 @@ In order to stably reproduce I have a multi-stage Docker file which builds the b
 Make sure you have DOcker installed it, for instance using [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/) or macOS and then:
 
 ```console
-docker build .
+docker build -t mdbook-kroki-test .
+docker run --name mdbook-kroki-test -d -p 8082:80 mdbook-kroki-test
+
+# We named the image and container `mdbook-kroki-test` above because this makes it easier to re-run the app after changing/fixing something
+# To rerun requires you have to stop and remove the container first. And a name is shorter than looking up random names or hashes Docker creates. 
+# docker stop mdbook-kroki-test
+# docker rm mdbook-kroki-test
 ```
